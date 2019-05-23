@@ -6,7 +6,6 @@
 */
 
 #include "vector_system.h"
-#include <stdio.h>
 
 void vector_mv_left_elem(vector_t *vector, size_t index)
 {

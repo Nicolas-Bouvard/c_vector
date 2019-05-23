@@ -50,3 +50,13 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+sources/main.c
+sources/display.c
+Makefile
+.gitignore
+vector
+libraries
+builds
+.vscode
+include/my.h

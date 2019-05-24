@@ -22,7 +22,8 @@ void vector_move_element(vector_t *vector, size_t elem_index, size_t new_index)
 void vector_move_list_start(vector_t *vector, size_t start, size_t end,
 size_t new)
 {
-    if (start >= vector->size || end >= vector->size || new >= vector->size)
+    if (start >= vector->size || end >= vector->size || new >= vector->size ||
+    new + (end - start) >= vector->size)
         return;
     for (size_t i = 0; end - i >= start; i++)
         vector_move_element(vector, end, new);
@@ -31,9 +32,9 @@ size_t new)
 void vector_move_list_end(vector_t *vector, size_t start, size_t end,
 size_t new)
 {
-    if (start >= vector->size || end >= vector->size || new >= vector->size)
+    if (start >= vector->size || end >= vector->size || new >= vector->size ||
+    end - start < 0)
         return;
     for (size_t i = 0; end - i >= start; i++)
-        if (end - start >= 0)
-            vector_move_element(vector, end, new - (end - start));
+        vector_move_element(vector, end, new - (end - start));
 }

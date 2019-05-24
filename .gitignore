@@ -51,9 +51,9 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-sources/main.c
-sources/display.c
-Makefile
+main.c
+display.c
+./Makefile
 .gitignore
 vector
 libraries

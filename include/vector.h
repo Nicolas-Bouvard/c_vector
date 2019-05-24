@@ -10,7 +10,14 @@
 
 #include <stdlib.h>
 #include <stdbool.h>
-#include "vector_struct.h"
+
+typedef struct vector_s
+{
+    void **element;
+    size_t size;
+    size_t allocated;
+    void (*destructor)(void *);
+}vector_t;
 
 //destructor : NULL for free()
 vector_t *vector_create(void (*destructor)(void *));

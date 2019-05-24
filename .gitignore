@@ -55,8 +55,9 @@ main.c
 display.c
 ./Makefile
 .gitignore
-vector
 libraries
 builds
 .vscode
 include/my.h
+Makefile
+vector_bin
